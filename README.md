@@ -13,8 +13,8 @@ $ cd baukis2
 $ docker-compose run web rails new . --force --skip-bundle --database=postgresql
 ```
 
-On Linux, you should change owner of generated files.
+## Log into the web container
 
 ```
-$ sudo chown -R $USER:$USER .
+$ docker-compose exec web bash
 ```
