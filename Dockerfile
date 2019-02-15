@@ -7,4 +7,6 @@ WORKDIR /baukis2
 COPY Gemfile /baukis2/Gemfile
 COPY Gemfile.lock /baukis2/Gemfile.lock
 RUN bundle install
+
 COPY . /baukis2
+RUN chown -R devel:devel .
