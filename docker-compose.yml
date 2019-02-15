@@ -9,7 +9,7 @@ services:
     command: /bin/sh
     user: devel
     volumes:
-      - .:/home/devel/baukis2
+      - .:/baukis2
     ports:
       - "3000:3000"
     depends_on:
