@@ -2,13 +2,14 @@
 
 Docker Compose を用いて Rails 6 の学習を始めるための設定ファイル等のセット
 
-## 必要条件
+## 動作環境
 
+* macOS Mojave または Ubuntu 18.04
 * Docker 18 以上
 * Docker Compose 1.13 以上
 * Git 2.7 以上
 
-## 環境構築
+## コンテナの構築
 
 ```
 % docker pull oiax/rails6-deps
