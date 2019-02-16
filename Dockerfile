@@ -13,8 +13,8 @@ COPY init/Gemfile /tmp/Gemfile
 COPY init/Gemfile.lock /tmp/Gemfile.lock
 RUN bundle install
 
-COPY ./baukis2 /baukis2
+COPY ./apps /apps
 
 USER devel
 
-WORKDIR /baukis2
+WORKDIR /apps
