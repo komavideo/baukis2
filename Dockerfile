@@ -6,6 +6,7 @@ ARG GID=1000
 RUN mkdir /var/mail
 RUN groupadd -g $GID devel
 RUN useradd -u $UID -g devel -m devel
+RUN echo "devel ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
 
 WORKDIR /tmp
 COPY init/Gemfile /tmp/Gemfile
