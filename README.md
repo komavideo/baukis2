@@ -1,4 +1,12 @@
-# Baukis2 - Config Files for Docker Compose
+# baukis2:docker-compose
+
+Docker Compose を用いて Rails 6 の学習を始めるための設定ファイル等のセット
+
+## 必要条件
+
+* Docker 18 以上
+* Docker Compose 1.13 以上
+* Git 2.7 以上
 
 ## 環境構築
 
