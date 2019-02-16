@@ -11,6 +11,7 @@ Docker Compose を用いて Rails 6 の学習を始めるための設定ファ�
 ## 環境構築
 
 ```
+% docker pull oiax/rails6-deps
 % git clone -b docker-compose https://github.com/kuroda/baukis2.git
 % cd baukis2
 % ./setup.sh
