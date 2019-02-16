@@ -1,12 +1,19 @@
 FROM oiax/rails6-deps:latest
 
-RUN mkdir /baukis2
-RUN chown devel:devel /baukis2
+ARG UID=1000
+ARG GID=1000
 
-WORKDIR /baukis2
-COPY Gemfile /baukis2/Gemfile
-COPY Gemfile.lock /baukis2/Gemfile.lock
+RUN mkdir /var/mail
+RUN groupadd -g $GID devel
+RUN useradd -u $UID -g devel -m devel
+
+WORKDIR /tmp
+COPY init/Gemfile /tmp/Gemfile
+COPY init/Gemfile.lock /tmp/Gemfile.lock
 RUN bundle install
 
-COPY . /baukis2
-RUN chown -R devel:devel .
+COPY ./baukis2 /baukis2
+
+USER devel
+
+WORKDIR /baukis2

@@ -7,9 +7,8 @@ services:
   web:
     build: .
     command: /bin/sh
-    user: devel
     volumes:
-      - .:/baukis2
+      - ./baukis2:/baukis2
     ports:
       - "3000:3000"
     depends_on:
