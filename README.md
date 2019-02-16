@@ -1,20 +1,38 @@
 # Baukis2 - Config Files for Docker Compose
 
-## Setting up
+## 環境構築
 
 ```
-$ git clone -b docker-compose https://github.com/kuroda/baukis2.git
-$ cd baukis2
+% git clone -b docker-compose https://github.com/kuroda/baukis2.git
+% cd baukis2
+% ./setup.sh
 ```
 
-## Generate the Rails Skeleton
+## コンテナの起動
 
 ```
-$ docker-compose run web rails new . --force --skip-bundle --database=postgresql
+% docker-compose up -d
 ```
 
-## Log into the web container
+## コンテナにログイン
 
 ```
-$ docker-compose exec web bash
+% docker-compose exec web bash
+```
+
+## Railsアプリケーションの開発作業を始める
+
+### 最初から始める場合
+
+```
+$ cd /apps
+$ rails new baukis2 -BJS -d postgresql
+```
+
+### 最終版から始める場合
+
+```
+$ cd /apps
+$ rm -rf baukis2
+$ git clone -b master https://github.com/kuroda/baukis2.git
 ```
