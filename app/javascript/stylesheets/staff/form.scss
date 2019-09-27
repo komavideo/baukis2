@@ -24,6 +24,9 @@ div#wrapper {
             color: $red;
           }
         }
+        input[type="checkbox"] + label {
+          display: inline;
+        }
         div.legend {
           text-align: right;
           font-size: $small;
