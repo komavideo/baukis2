@@ -67,7 +67,7 @@ class Staff::CustomerForm
   end
 
   private def home_address_params
-    @params.require(:customer).except(:phones).permit(
+    @params.require(:home_address).except(:phones).permit(
       :postal_code, :prefecture, :city, :address1, :address2,
     )
   end
